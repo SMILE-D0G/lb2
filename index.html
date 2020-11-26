@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lb 2</title>
+	<link href="styles.css" type="text/css" rel="stylesheet">
+	<style type="text/css"> body {font-style:oblique} </style>
+	   <style>
+      p.DKGrey {
+         font-family: system, arial, times new roman;
+         color: red; 
+      }
+      p.float {
+         float: right;
+		 color: green;
+      }
+    
+      div#One {
+         background-color: black;
+		 color: white;
+      }
+      div#absolute {
+		position:absolute;
+	   top: 16px;
+	   left: 250px;
+	  }
+	  div#relative {
+		position:relative;
+	   bottom: 35px;
+	   right: 12px;
+	  } 
+</style>		  
+<style type="text/css"> 
+	.form_radio {
+	margin-bottom: 10px;
+	font-style: normal;
+}
+	.form_radio input[type=radio] {
+		display: none;
+}
+	.form_radio label {
+		display: inline-block;
+		cursor: pointer;
+		position: relative;
+		padding-left: 25px;
+		margin-right: 0;
+		line-height: 18px;
+		user-select: none;
+}
+	.form_radio label:before {
+		content: "";
+		display: inline-block;
+		width: 17px;
+		height: 18px;
+		position: absolute;
+		left: 0;
+		bottom: 1px;
+		background: url(rb1.png) 0 0 no-repeat;
+}
+	.form_radio input[type=radio]:checked + label:before {
+		background: url(rb2.png) 0 0 no-repeat;
+}
+	.form_radio label:hover:before {
+		filter: brightness(400%);
+}
+	.form_radio input[type=radio]:disabled + label:before {
+		background: url(rb3.png) 0 0 no-repeat;
+}
+	.container {
+		font-style: normal;
+		font: bold;
+		height: 60px;
+		width: 540px;
+		display: flex;
+		background: gray;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+}
+.item1 {
+  background: green;
+  padding: 5px;
+  width: 90px;
+  height: 30px;
+  margin-top: 10px;
+  margin-right: 10px;
+  line-height: 10 px;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  border-radius: 5px;
+  order: 3;
+}
+.item2 {
+  background: blue;
+  padding: 5px;
+  width: 100px;
+  height: 30px;
+  margin-top: 10px;
+  line-height: 10 px;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  border-radius: 5px;
+  order: 4;
+}
+.item3 {
+  background: blue ;
+  padding: 5px;
+  width: 90px;
+  height: 30px;
+  margin-left: 40px;
+  margin-top: 10px;
+  margin-right: 10px;
+  line-height: 10 px;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  border-radius: 5px;
+  order: 1;
+}
+.item4 {
+  background: red;
+  padding: 5px;
+  width: 120px;
+  height: 30px;
+  margin-top: 10px;
+  margin-right: 10px;
+  line-height: 10 px;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  border-radius: 5px;
+  order: 2;
+}
+   </style>
+   
+</head>
+<body>
+<h2 style="color:brown;">Пример inline-описания</h2>
+<p>
+Пример внедрения таблицы стилей с помощью контейнера style
+</p>
+<p class="DKGrey">
+	Пример использования класса
+</p>
+<div id="One">
+	Пример использования идентификатора
+</div>
+<div id="absolute">
+	Пример использования абсолютного позиционирования
+</div>
+<div id="relative">
+	Пример использования относительного позиционирования
+</div>
+<p class="float">Пример использования плавающей модели</p>
+<h2>Вариант №1</h2>
+<div class="form_radio">
+	<input id="radio-1" type="radio" name="radio" value="1" checked>
+	<label for="radio-1">Радио кнопка 1</label>
+</div>
+ 
+<div class="form_radio">
+	<input id="radio-2" type="radio" name="radio" value="2">
+	<label for="radio-2">Радио кнопка 2</label>
+</div>
+ 
+<div class="form_radio">
+	<input id="radio-3" type="radio" name="radio" value="3">
+	<label for="radio-3">Радио кнопка 3</label>
+</div>
+ 
+<div class="form_radio">
+	<input id="radio-4" type="radio" name="radio" value="4" disabled>
+	<label for="radio-4">Радио отключенное</label>
+</div>
+<ul class="container">
+  <li class="item1">Я ПЕРВЫЙ</li>
+  <li class="item2">Я ВТОРОЙ</li>
+  <li class="item3">Я ТРЕТИЙ</li>
+  <li class="item4">Я ЧЕТВЕРТЫЙ</li>
+</ul>
+</body>
+</html>
